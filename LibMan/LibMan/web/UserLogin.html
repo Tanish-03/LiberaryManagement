@@ -1,0 +1,194 @@
+\<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3498db; /* Blue color for the background */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        /* Add more CSS styles here as needed */
+        /* For demonstration, we'll style the login forms */
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        form h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"],
+        form input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#admin-book-keeping">Admin Book Keeping</a></li>
+            <li><a href="#issue-books">Issue Books</a></li>
+            <li><a href="#fine-generation">Fine Generation</a></li>
+            <li><a href="#advance-booking">Advance Booking</a></li>
+            <li><a href="#report-generation">Report Generation</a></li>
+            <li><a href="#browse-books">Browse Books</a></li>
+            <li><a href="#search-books">Search Books</a></li>
+            <li><a href="#return-books">Return Books</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="admin-book-keeping">
+        <h2>Admin Book Keeping</h2>
+        <!-- Add forms for book-keeping here -->
+    </section>
+
+    <section id="issue-books">
+        <h2>Issue Books</h2>
+        <!-- Add forms for issuing books here -->
+    </section>
+
+    <section id="fine-generation">
+        <h2>Fine Generation</h2>
+        <!-- Add forms for fine generation here -->
+    </section>
+
+    <section id="advance-booking">
+        <h2>Advance Booking</h2>
+        <!-- Add forms for advance booking here -->
+    </section>
+
+    <section id="report-generation">
+        <h2>Report Generation</h2>
+        <!-- Add forms for report generation here -->
+    </section>
+
+    <section id="browse-books">
+        <h2>Browse Books</h2>
+        <!-- Add forms for browsing books here -->
+    </section>
+
+    <section id="search-books">
+        <h2>Search Books</h2>
+        <!-- Add forms for searching books here -->
+    </section>
+
+    <section id="return-books">
+        <h2>Return Books</h2>
+        <!-- Add forms for returning books here -->
+    </section>
+
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+        <!-- Add forms for contact us here -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact Us: library@example.com</p>
+    </footer>
+
+    <script>
+        // JavaScript code to handle menu options and sections
+        const menuLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('section');
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent default link behavior
+                const targetSectionId = event.target.getAttribute('href');
+                const targetSection = document.querySelector(targetSectionId);
+
+                // Hide all sections
+                sections.forEach(section => section.classList.remove('active'));
+
+                // Show the selected section
+                targetSection.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

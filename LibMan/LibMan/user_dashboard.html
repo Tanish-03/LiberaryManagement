@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .user-info {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .logout-btn {
+            background-color: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the User Dashboard</h1>
+    </header>
+    <div class="container">
+        <div class="user-info">
+            <h2>User Information</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Email:</strong> john.doe@example.com</p>
+            <p><strong>Role:</strong> User</p>
+        </div>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        function logout() {
+            // You can add logout logic here, such as clearing session data and redirecting to the login page
+            alert('You have been logged out!');
+            window.location.href = 'userloginservlet.html'; // Replace with the actual login page URL
+        }
+    </script>
+</body>
+</html>
